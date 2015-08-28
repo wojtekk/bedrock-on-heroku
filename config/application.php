@@ -26,8 +26,16 @@ if (file_exists($env_config)) {
 /**
  * URLs
  */
-define('WP_HOME', getenv('WP_HOME'));
-define('WP_SITEURL', getenv('WP_SITEURL'));
+$_server_http_host_scheme = 'http';
+if (array_key_exists('HTTPS',$_SERVER) && $_SERVER['HTTPS'] == 'on') {
+    $_server_http_scheme = 'https';
+}
+$_server_http_host_name = 'localhost';
+if (array_key_exists('HTTP_HOST',$_SERVER)) {
+    $_server_http_host_name = $_SERVER['HTTP_HOST'];
+}
+define('WP_HOME', getenv('WP_HOME') ? getenv('WP_HOME') : "$_server_http_host_scheme://$_server_http_host_name");
+define('WP_SITEURL', getenv('WP_SITEURL') ? getenv('WP_SITEURL') : "$_server_http_host_scheme://$_server_http_host_name/wp");
 
 /**
  * Custom Content Directory

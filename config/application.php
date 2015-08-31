@@ -24,6 +24,11 @@ if (file_exists($env_config)) {
 }
 
 /**
+ *
+ */
+define('WP_CACHE', getenv('WP_CACHE') == 'true');
+
+/**
  * URLs
  */
 $_server_http_host_scheme = 'http';

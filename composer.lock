@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "06c166a7e4f778743beb9228144cdf1e",
+    "hash": "bd74e18e64cbea5aba00427154f0a4be",
+    "content-hash": "b7a68ad1b44fa4ebbd3a0f6d5662badd",
     "packages": [
         {
             "name": "composer/installers",
@@ -105,6 +106,233 @@
                 "zikula"
             ],
             "time": "2016-04-13 19:46:30"
+        },
+        {
+            "name": "deliciousbrains/wp-amazon-s3-and-cloudfront",
+            "version": "dev-frc",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/wp-amazon-s3-and-cloudfront.git",
+                "reference": "85384e057ec301371ac4b26beb3c23b63c39ad67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/wp-amazon-s3-and-cloudfront/zipball/85384e057ec301371ac4b26beb3c23b63c39ad67",
+                "reference": "85384e057ec301371ac4b26beb3c23b63c39ad67",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0.6"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPLv3"
+            ],
+            "description": "Automatically copies media uploads to Amazon S3 for delivery. Optionally configure Amazon CloudFront for even faster delivery.",
+            "homepage": "https://github.com/deliciousbrains/wp-amazon-s3-and-cloudfront",
+            "keywords": [
+                "amazon-web-services",
+                "cdn",
+                "cloudfront",
+                "plugin",
+                "s3"
+            ],
+            "support": {
+                "source": "https://github.com/frc/wp-amazon-s3-and-cloudfront/tree/0.9.10-frantic"
+            },
+            "time": "2015-12-16 09:15:44"
+        },
+        {
+            "name": "frc/batcache",
+            "version": "v1.2-p1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/batcache.git",
+                "reference": "171a3e0180bea1813f2a479e1af9431561234ff2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/batcache/zipball/171a3e0180bea1813f2a479e1af9431561234ff2",
+                "reference": "171a3e0180bea1813f2a479e1af9431561234ff2",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-muplugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A memcached HTML page cache for WordPress. Fork of the automattic/batcache.",
+            "homepage": "https://github.com/frc/batcache",
+            "time": "2015-10-05 08:58:06"
+        },
+        {
+            "name": "frc/wp-env-heroku-amazon-aws",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/wp-env-heroku-amazon-aws.git",
+                "reference": "f1abc1c8fc834908386bfd5c25f13edd7606694a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/wp-env-heroku-amazon-aws/zipball/f1abc1c8fc834908386bfd5c25f13edd7606694a",
+                "reference": "f1abc1c8fc834908386bfd5c25f13edd7606694a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/AWS.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josep Roca",
+                    "email": "josep.roca@frantic.com"
+                }
+            ],
+            "description": "Export Amazon AWS configuration for amazon-web-services WP plugin.",
+            "keywords": [
+                "amazon aws",
+                "amazon web services",
+                "heroku",
+                "wordpress"
+            ],
+            "time": "2015-09-23 11:31:49"
+        },
+        {
+            "name": "frc/wp-env-heroku-cleardb",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/wp-env-heroku-cleardb.git",
+                "reference": "5437d23206168c5841720b85e50946c99c1d70cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/wp-env-heroku-cleardb/zipball/5437d23206168c5841720b85e50946c99c1d70cc",
+                "reference": "5437d23206168c5841720b85e50946c99c1d70cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/ClearDB.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Panu Ervamaa",
+                    "email": "panu.ervamaa@frantic.com"
+                }
+            ],
+            "description": "Export Heroku cleardb addon configuration for WordPress.",
+            "keywords": [
+                "ClearDB",
+                "heroku",
+                "mysql",
+                "wordpress"
+            ],
+            "time": "2015-10-02 10:51:10"
+        },
+        {
+            "name": "frc/wp-env-heroku-redis",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/wp-env-heroku-redis.git",
+                "reference": "123bc3b2f5e02d1d617bf5cbfbe41a889abfa33a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/wp-env-heroku-redis/zipball/123bc3b2f5e02d1d617bf5cbfbe41a889abfa33a",
+                "reference": "123bc3b2f5e02d1d617bf5cbfbe41a889abfa33a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Redis.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Panu Ervamaa",
+                    "email": "panu.ervamaa@frantic.com"
+                }
+            ],
+            "description": "Export Heroku redis addon configuration for WordPress.",
+            "keywords": [
+                "heroku",
+                "redis",
+                "wordpress"
+            ],
+            "time": "2015-08-31 21:24:52"
+        },
+        {
+            "name": "frc/wp-env-heroku-sendgrid",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frc/wp-env-heroku-sendgrid.git",
+                "reference": "b07f8ae9c72eab886ea08490306e957004deeca7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frc/wp-env-heroku-sendgrid/zipball/b07f8ae9c72eab886ea08490306e957004deeca7",
+                "reference": "b07f8ae9c72eab886ea08490306e957004deeca7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Sendgrid.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Panu Ervamaa",
+                    "email": "panu.ervamaa@frantic.com"
+                }
+            ],
+            "description": "Export Heroku sendgrid addon configuration for WordPress.",
+            "keywords": [
+                "heroku",
+                "sendgrid",
+                "wordpress"
+            ],
+            "time": "2015-08-31 22:18:39"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -291,6 +519,38 @@
             "time": "2016-03-01 16:27:06"
         },
         {
+            "name": "tillkruss/redis-object-cache",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tillkruss/Redis-Object-Cache.git",
+                "reference": "d198cd222091a3c912442459e88466e07a58af53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tillkruss/Redis-Object-Cache/zipball/d198cd222091a3c912442459e88466e07a58af53",
+                "reference": "d198cd222091a3c912442459e88466e07a58af53",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Till Krüss",
+                    "homepage": "https://till.kruss.me/"
+                }
+            ],
+            "description": "A persistent object cache backend powered by Redis. Supports HHVM's Redis extension, the PECL Redis Extension and the Predis library for PHP.",
+            "homepage": "https://github.com/tillkruss/Redis-Object-Cache",
+            "time": "2016-03-03 06:40:27"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.2.1",
             "source": {
@@ -339,6 +599,66 @@
                 "environment"
             ],
             "time": "2016-04-15 10:48:49"
+        },
+        {
+            "name": "wpackagist-plugin/amazon-web-services",
+            "version": "0.3.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-web-services/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.zip",
+                "reference": "trunk",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-web-services/"
+        },
+        {
+            "name": "wpackagist-plugin/limit-login-attempts",
+            "version": "1.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/limit-login-attempts/",
+                "reference": "tags/1.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/limit-login-attempts.1.7.1.zip",
+                "reference": "tags/1.7.1",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/limit-login-attempts/"
+        },
+        {
+            "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
+            "version": "1.6.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/sendgrid-email-delivery-simplified/",
+                "reference": "tags/1.6.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/sendgrid-email-delivery-simplified.1.6.9.zip",
+                "reference": "tags/1.6.9",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
         }
     ],
     "packages-dev": [
@@ -423,10 +743,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "deliciousbrains/wp-amazon-s3-and-cloudfront": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "ext-redis": "*",
         "php": ">=5.5"
     },
     "platform-dev": []

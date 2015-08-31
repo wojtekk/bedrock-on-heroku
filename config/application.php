@@ -33,6 +33,11 @@ if (file_exists($env_config)) {
 }
 
 /**
+ *
+ */
+define('WP_CACHE', env('WP_CACHE'));
+
+/**
  * URLs
  */
 if (array_key_exists('HTTP_X_FORWARDED_PROTO',$_SERVER) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == 'https') $_SERVER['HTTPS'] = 'on';

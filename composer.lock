@@ -4,8 +4,19 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2e77a91fd4ff3f08310bd182bd69bac9",
+    "hash": "b22f99ebf2163f90250468f289274fa6",
     "packages": [
+        {
+            "name": "acf/advanced-custom-fields-pro",
+            "version": "5.3.2.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://s3-eu-west-1.amazonaws.com/satis-repository-bedrock/dist/acf-advanced-custom-fields-pro-5.3.2.2.tar",
+                "reference": null,
+                "shasum": "f2230277e16cceaeecbc10ae13778054daa3fe68"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.22",
@@ -565,6 +576,7 @@
     "prefer-lowest": false,
     "platform": {
         "ext-redis": "*",
+        "ext-gd": "*",
         "php": "^5.6"
     },
     "platform-dev": []

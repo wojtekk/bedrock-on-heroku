@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b22f99ebf2163f90250468f289274fa6",
+    "hash": "b2f87719420392ffbd18f0a215e1513f",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -564,6 +564,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-mu-domain-mapping",
+            "version": "0.5.5.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-mu-domain-mapping/",
+                "reference": "tags/0.5.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-mu-domain-mapping.0.5.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-mu-domain-mapping/"
         }
     ],
     "packages-dev": [],

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bd74e18e64cbea5aba00427154f0a4be",
-    "content-hash": "b7a68ad1b44fa4ebbd3a0f6d5662badd",
+    "hash": "29d195f5270d114c47d470df6b281b6f",
+    "content-hash": "7e322c3f0ce46aafc1ab881ac6ec9ad4",
     "packages": [
         {
             "name": "composer/installers",
@@ -659,6 +659,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-mu-domain-mapping",
+            "version": "0.5.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-mu-domain-mapping/",
+                "reference": "tags/0.5.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-mu-domain-mapping.0.5.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-mu-domain-mapping/"
         }
     ],
     "packages-dev": [

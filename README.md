@@ -13,6 +13,7 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 * Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
 * Autoloader for mu-plugins (use regular plugins as mu-plugins)
 * Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+* Multi site support
 
 Use [Trellis](https://github.com/roots/trellis) for additional features:
 
@@ -40,6 +41,8 @@ See a complete working example in the [roots-example-project.com repo](https://g
   * `WP_HOME` - Full URL to WordPress home (http://example.com)
   * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT` - Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command) or from the [WordPress Salt Generator](https://api.wordpress.org/secret-key/1.1/salt/)
+  * `WP_ALLOW_MULTISITE` - *true* if want to start using multi site (should be *false* unless explicitly needed)
+  * `WP_MULTISITE_MAIN_DOMAIN` - Master domain name for multi site (do not set before enabling network from WP admin)
 4. Add theme(s) in `web/app/themes` as you would for a normal WordPress site.
 5. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
 6. Access WP admin at `http://example.com/wp/wp-admin`

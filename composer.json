@@ -40,6 +40,9 @@
       "url": "https://s3-eu-west-1.amazonaws.com/satis-repository-bedrock"
     }
   ],
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "dev-master"
+  },
   "require": {
     "ext-redis": "*",
     "ext-gd": "*",

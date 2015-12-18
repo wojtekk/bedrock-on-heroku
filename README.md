@@ -57,6 +57,47 @@ Any other deployment method can be used as well with one requirement:
 
 `composer install` must be run as part of the deploy process.
 
+## Local development
+
+You can use `heroku local` to start local development. By default the web server is started on [localhost:5000](http://localhost:5000). Please note that the `heroku local` needs an nginx configured with *realip* -module, which can be easily installed with the following commands (also doing some cleanup, as the local configuration is not needed anymore):
+
+```
+# Unload nginx running the default configuration
+$ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+
+# Uninstall existing nginx
+$ brew uninstall --force nginx
+Uninstalling nginx... (23 files, 2,7M)
+
+# Cleanup (backup legacy nginx configurations if you need those in future)
+$ sudo rm -rf /usr/local/etc/nginx /usr/local/Library/Formula/nginx.rb \
+    /usr/local/var/log/nginx* /usr/local/var/run/nginx*
+
+# Install nginx with realip module
+$ brew tap homebrew/nginx
+$ brew install nginx-full --with-realip
+```
+
+*Note!* If you want to install `heroku local` to existing Bedrock installations, you may just add the following to your *composer.json* -file:
+
+```sh
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "dev-master"
+  },
+```
+
+If using multi site, you need also to install a *reverse proxy* (any other reverse proxy will also suffice):
+
+```sh
+$ npm install -g reverse-proxy-js
+```
+
+You can then start the proxy by giving command (sudo is needed for restricted ports):
+
+```sh
+$ sudo reverse-proxy --port 80 --target 5000
+```
+
 ## Documentation
 
 Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).

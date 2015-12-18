@@ -57,6 +57,7 @@
     "roots/wp-password-bcrypt": "1.0.0"
   },
   "require-dev": {
+    "heroku/heroku-buildpack-php": "dev-master",
     "squizlabs/php_codesniffer": "^2.5.1"
   },
   "extra": {

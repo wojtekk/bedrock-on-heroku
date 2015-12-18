@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "29d195f5270d114c47d470df6b281b6f",
-    "content-hash": "7e322c3f0ce46aafc1ab881ac6ec9ad4",
+    "hash": "d5291fce82b2b4ada45de24b60a4673f",
+    "content-hash": "114d1c619c6576c8a6ea1df06f927707",
     "packages": [
         {
             "name": "composer/installers",
@@ -683,6 +683,50 @@
     ],
     "packages-dev": [
         {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "2c8d01ff3aab321d6a9a674d84b434bbacca3300"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/2c8d01ff3aab321d6a9a674d84b434bbacca3300",
+                "reference": "2c8d01ff3aab321d6a9a674d84b434bbacca3300",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2016-04-29 17:10:34"
+        },
+        {
             "name": "squizlabs/php_codesniffer",
             "version": "2.6.0",
             "source": {
@@ -764,7 +808,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "deliciousbrains/wp-amazon-s3-and-cloudfront": 20
+        "deliciousbrains/wp-amazon-s3-and-cloudfront": 20,
+        "heroku/heroku-buildpack-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

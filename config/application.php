@@ -30,16 +30,12 @@ define('WP_CACHE', getenv('WP_CACHE') == 'true');
 /**
  * URLs
  */
-$_server_http_host_scheme = 'http';
-if (array_key_exists('HTTPS',$_SERVER) && $_SERVER['HTTPS'] == 'on') {
-    $_server_http_scheme = 'https';
-}
-$_server_http_host_name = 'localhost';
-if (array_key_exists('HTTP_HOST',$_SERVER)) {
-    $_server_http_host_name = $_SERVER['HTTP_HOST'];
-}
-define('WP_HOME', getenv('WP_HOME') ? getenv('WP_HOME') : "$_server_http_host_scheme://$_server_http_host_name");
-define('WP_SITEURL', getenv('WP_SITEURL') ? getenv('WP_SITEURL') : "$_server_http_host_scheme://$_server_http_host_name/wp");
+if ($_SERVER["HTTP_X_FORWARDED_PROTO"] == 'https') $_SERVER['HTTPS'] = 'on';
+$_server_http_host_scheme = array_key_exists('HTTPS',$_SERVER) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
+$_server_http_host_name = array_key_exists('HTTP_HOST',$_SERVER) ? $_SERVER['HTTP_HOST'] : 'localhost';
+$_server_http_url = "$_server_http_host_scheme://$_server_http_host_name";
+define('WP_HOME', getenv('WP_HOME') ? getenv('WP_HOME') : $_server_http_url);
+define('WP_SITEURL', getenv('WP_SITEURL') ? getenv('WP_SITEURL') : "$_server_http_url/wp");
 
 /**
  * Custom Content Directory
@@ -77,6 +73,8 @@ define('NONCE_SALT', getenv('NONCE_SALT'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', getenv('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
+define("FORCE_SSL_LOGIN", getenv("FORCE_SSL_LOGIN") == "true");
+define("FORCE_SSL_ADMIN", getenv("FORCE_SSL_ADMIN") == "true");
 
 /**
  * Bootstrap WordPress

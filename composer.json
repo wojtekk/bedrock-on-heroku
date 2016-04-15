@@ -34,10 +34,6 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "composer",
-      "url": "https://s3-eu-west-1.amazonaws.com/satis-repository-bedrock"
     }
   ],
   "require-dev": {
@@ -56,7 +52,6 @@
     "frc/wp-env-heroku-redis": "~1.0.0",
     "frc/wp-env-heroku-sendgrid": "~1.0.0",
     "frc/wp-env-heroku-amazon-aws": "~1.0.0",
-    "acf/advanced-custom-fields-pro": "~5.3.1",
     "wpackagist-plugin/wordpress-mu-domain-mapping": "~0.5.5",
     "php": "^5.6",
     "composer/installers": "~1.0.21",

@@ -2,8 +2,8 @@
 ip: "192.168.10.10"
 memory: 2048
 cpus: 1
-hostname: campaign-manager
-name: campaign-manager
+hostname: wp
+name: wp
 provider: virtualbox
 
 authorize: ~/.ssh/id_rsa.pub
@@ -13,11 +13,11 @@ keys:
 
 folders:
     - map: "."
-      to: "/home/vagrant/campaign-manager"
+      to: "/home/vagrant/wp"
 
 sites:
-    - map: campaign-manager.local
-      to: "/home/vagrant/campaign-manager/web"
+    - map: wp.local
+      to: "/home/vagrant/wp/web"
 
 databases:
-    - campaign-manager
+    - wp

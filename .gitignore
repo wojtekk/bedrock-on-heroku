@@ -19,6 +19,8 @@ sql-dump-*.sql
 .env
 .env.*
 !.env.example
+!.env.vagrant
+!.env.local
 
 # Vendor (e.g. Composer)
 /vendor
